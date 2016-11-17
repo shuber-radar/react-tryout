@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :posts, only: :index
-  root to: 'posts#index'
+  get 'home/index'
+  resources :users
+  root to: 'home#index'
 end
