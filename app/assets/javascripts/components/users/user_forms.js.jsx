@@ -9,7 +9,7 @@ var UserForms = React.createClass({
     this.props.saveAll();
   },
   render () {
-    var users = this.props.users.map(function(user) {
+    let users = this.props.users.map(function(user) {
       return <UserEdit
         key={user.id}
         user={user}
@@ -19,7 +19,7 @@ var UserForms = React.createClass({
     }.bind(this));
 
     return (
-      <div>
+      <div className="user-forms">
         {users}
 
         <button onClick={this.saveAll}>

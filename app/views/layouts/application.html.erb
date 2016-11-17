@@ -11,6 +11,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= react_component(
+  'MainNavigation',
+  { initialRoutes: @routes },
+  { prerender: false }
+) %>
 
 <%= yield %>
 

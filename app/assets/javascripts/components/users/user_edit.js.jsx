@@ -9,8 +9,18 @@ var UserEdit = React.createClass({
     this.props.saveUser(this.props.user);
   },
   render: function() {
+    // I added this javascript styling as example
+    let userEditStyle = {
+      padding: 10,
+      paddingBottom: 20
+    };
+
+    let buttonStyle = {
+      float: "right"
+    };
+
     return (
-      <div>
+      <div style={userEditStyle}>
         <form onSubmit={this.handleSubmit}>
           <label>Name:</label>
           <input
@@ -33,7 +43,7 @@ var UserEdit = React.createClass({
             checked={this.props.user.admin}
             onChange={this.update}
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" style={buttonStyle} />
         </form>
       </div>
     );

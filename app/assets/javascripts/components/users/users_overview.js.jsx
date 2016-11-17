@@ -5,9 +5,11 @@ var UsersOverview = React.createClass({
     });
 
     return (
-      <ul>
-        {users}
-      </ul>
+      <div className="user-overview">
+        <ul>
+          {users}
+        </ul>
+      </div>
     );
   }
 });

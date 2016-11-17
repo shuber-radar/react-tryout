@@ -33,7 +33,8 @@ var Users = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div id="users">
+        <h1>Users</h1>
         <UsersOverview
           users={this.state.users}
         />
